@@ -1,0 +1,807 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(images/banner.png);
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4%;
+}
+.navlinks {
+  flex-wrap: wrap;
+}
+.logo {
+  width: 140px;
+  cursor: pointer;
+}
+.navlinks li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 20px;
+}
+/* .navlinks .active {
+  position: relative;
+}
+.active::after {
+  content: " ";
+  background-color: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 2px;
+} */
+.navlinks li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+.regbut {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+.container {
+  padding: 0 7%;
+  /* display: flex; */
+  /*flex-direction: column;
+  gap: 50px; */
+}
+.header h1 {
+  text-align: center;
+  color: white;
+  padding-top: 22%;
+  font-weight: bold;
+  font-size: 4vw;
+}
+.searchbar {
+  width: 70%;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 10px 6px 30px;
+}
+.searchbar form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* .searchbar form .loc {
+  /* width: 30%; */
+
+.searchbar form input {
+  display: block;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.searchbar form button {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(255, 89, 0);
+}
+.searchbar form button img {
+  width: 15px;
+  margin-top: 7px;
+}
+.searchbar form label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+/* ------------------exclusives--------------------- */
+.exc {
+  margin: 50px 0 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+}
+.exclusives {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+.exclusives img {
+  width: 100%;
+  border-radius: 10px;
+  /* position: relative; */
+  /* background-position: top;
+  background-size: cover; */
+}
+.exclusives div {
+  /* margin: 10px 0px; */
+  position: relative;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.exclusives div span {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* /* --------------treanding places--------------  */
+.trending {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 35px;
+  /* justify-content: space-between; */
+  margin-bottom: 30px;
+}
+.trending div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+/* ---------cta------------- */
+.cta {
+  background-image: linear-gradient(to right, #3f2321, transparent),
+    url(images/banner-2.png);
+  /* background-image: url(images/banner-2.png); */
+  margin: 80px 0;
+  border-radius: 10px;
+  padding: 4% 5%;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+.cta h3 {
+  font-size: 4vw;
+  line-height: 5vw;
+}
+.cta p {
+  font-size: 18px;
+  margin: 10px 0;
+  margin-bottom: 30px;
+}
+.cta .cta-a {
+  text-decoration: none;
+  color: white;
+  background: rgb(237, 27, 12);
+  padding: 12px 30px;
+  /* margin-top: 40px; */
+  border-radius: 10px;
+}
+/* -----------------------------traveler stories--------------------------- */
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 400px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.story1 {
+  background-color: #2d2d2d;
+  background-blend-mode: hard-light;
+  border-radius: 10px;
+  background-position: top;
+  background-size: auto;
+  transition: all 1s ease-in-out;
+}
+.story1:hover {
+  background-position: center;
+  box-shadow: 0 0 20px black;
+  background-color: #99999930;
+}
+
+.stories div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stories div p {
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin: 0 20px;
+  opacity: 0;
+  transition: all 0.6s ease-in-out 0s;
+}
+.story1 p:hover {
+  opacity: 1;
+}
+
+.start-a {
+  width: 80%;
+  display: block;
+  max-width: 350px;
+  background: rgb(237, 27, 12);
+  color: white;
+  margin: 60px auto;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 30px;
+  text-align: center;
+}
+/* ---------------about-------------------- */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.about h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.801);
+}
+.about p {
+  font-size: 18px;
+  text-align: center;
+}
+/* ---------------------------footer-------------------------- */
+.footer {
+  text-align: center;
+  margin: 20px;
+}
+.footer a {
+  font-size: 20px;
+  padding: 0 10px;
+}
+.footer i {
+  transition: all 0.6s ease-in-out;
+}
+.footer i:hover {
+  transform: scale(2);
+}
+.footer hr {
+  width: 100%;
+  color: #3333336d;
+  margin: 10px 0;
+}
+nav .fa-bars {
+  display: none;
+}
+/* -------for small screen----------------------------- */
+@media only screen and (max-width: 700px) {
+  .logo {
+    position: fixed;
+    top: 4%;
+    left: 7%;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+
+    z-index: 100;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 7% 0;
+    background-color: black;
+    text-align: right;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  .navlinks li {
+    margin: 10px 0;
+    display: block;
+  }
+  .regbut {
+    margin: 15px 0 30px;
+    display: inline-block;
+  }
+  nav .fa-bars {
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 7%;
+    color: white;
+    font-size: 28px;
+  }
+  .hidemenu {
+    max-height: 300px;
+  }
+  .header h1 {
+    padding-top: 200px;
+    font-size: 7vw;
+  }
+  .searchbar {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px 10px 30px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .searchbarform {
+    display: block;
+  }
+  .searchbar form input {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  .searchbar form button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  .cta {
+    padding: 10% 5%;
+  }
+  .cta h3 {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+  .cta p {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  .cta-a {
+    padding: 6px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+/* ---------listing page-------------------- */
+.navbarwhite {
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.navbarwhite .navlinks li a {
+  color: black;
+}
+.navbarwhite .regbut {
+  background-color: rgb(255, 89, 0);
+  color: white;
+}
+
+.navbarwhite .fa-bars {
+  color: black;
+}
+.navbarwhite .active::after {
+  color: #ff5361;
+}
+.listcontainer {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.leftcol {
+  flex-basis: 70%;
+}
+.rightcol {
+  flex-basis: 25%;
+}
+
+.leftcol h1 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.house {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+.houseimg {
+  flex-basis: 40%;
+}
+.house-info {
+  flex-basis: 58%;
+  color: #555;
+}
+.houseimg img {
+  width: 100%;
+  border-radius: 12px;
+}
+.house-info h3 {
+  font-weight: 600;
+  color: #333;
+  font-size: 22px;
+  margin: 4px 0;
+}
+.house-info i {
+  color: #ff5361;
+  font-size: 18px;
+  margin: 10px 1px;
+}
+.houseprice {
+  text-align: right;
+}
+.houseprice h4 {
+  font-size: 20px;
+}
+.houseprice h4 span {
+  font-weight: 500;
+}
+/* ---------------sidebar---------------- */
+.sidebar {
+  border: 1px solid black;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+.sidebar h2 {
+  font-weight: 500;
+}
+.sidebar h3 {
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  color: #555;
+  margin-bottom: 10px;
+}
+.filter p {
+  flex: 1;
+}
+.filter input {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.sidebar-link {
+  text-align: right;
+  margin: 20px 0;
+}
+.sidebar-link a {
+  text-decoration: none;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+.pagination img {
+  width: 15px;
+  margin: 10px 20px;
+}
+.rightarrow {
+  transform: rotate(180deg);
+}
+.pagination span {
+  margin: 10px 8px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.currentpage {
+  background-color: #333;
+  color: #fff;
+}
+
+/* --------------small screen lisiting page------------------------ */
+@media only screen and (max-width: 850px) {
+  .listcontainer {
+    margin-top: 150px;
+  }
+  .leftcol,
+  .rightcol,
+  .houseimg,
+  .house-info {
+    flex-basis: 100%;
+  }
+  .leftcol h1 {
+    font-size: 22px;
+  }
+  .house-info h3 {
+    font-size: 18px;
+  }
+  .house-info i {
+    font-size: 15px;
+  }
+  .pagination span {
+    margin: 10px 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+}
+/* --------house details page--------------------- */
+.house-details {
+  padding: 0 12%;
+  padding-bottom: 2%;
+}
+.house-title {
+  margin: 30px 0;
+}
+.house-title h1 {
+  font-weight: 600;
+}
+.house-title .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+}
+.house-title span {
+  margin: 0 20px;
+}
+.house-title i {
+  color: #ff5361;
+  font-size: 14px;
+}
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "first first . ." "first first . .";
+  margin: 10px 0;
+}
+.gallery div img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.img1 {
+  grid-area: first;
+}
+.smalldetails h4 {
+  text-align: right;
+  font-size: 22px;
+}
+
+.smalldetails h2 {
+  font-weight: bold;
+}
+.line {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px 0;
+}
+.check-form {
+  margin: 30px 0;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 50px;
+}
+.check-form label {
+  display: block;
+}
+.check-form div {
+  padding: 20px;
+}
+.check-form input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+.check-form button {
+  background-color: #ff5361;
+  border: 0;
+  outline: none;
+  color: #fff;
+  padding: 18px;
+  width: 350px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.guest-field {
+  flex: 1;
+}
+
+.details-list {
+  list-style: none;
+  margin: 50px 0;
+}
+.details-list li {
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #555;
+  position: relative;
+}
+.details-list span {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+}
+.details-list li i {
+  position: absolute;
+  top: 5px;
+  left: -40px;
+}
+.home-desc {
+  max-width: 700px;
+  margin: 30px auto;
+}
+.map iframe {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.map {
+  margin: 30px 0;
+}
+.map h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.map b {
+  display: block;
+  margin-bottom: 15px;
+}
+.host {
+  display: flex;
+  align-items: center;
+}
+.host img {
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.host h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.host i {
+  color: #ff5361;
+}
+.contact-host {
+  display: inline-block;
+  margin: 40px 0 40px 120px;
+  text-decoration: none;
+  color: #555;
+  padding: 15px 50px;
+  border: 1px solid #ff5361;
+  border-radius: 12px;
+}
+/* -----------------house page for small screen----------------- */
+@media only screen and (max-width: 700px) {
+  .house-details {
+    margin-top: 150px;
+  }
+  .row p {
+    margin-top: 10px;
+  }
+  .gallery {
+    grid-template-areas: "first first" ". ." ". .";
+  }
+  .smalldetails h2 {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+  .smalldetails h4 {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .check-form {
+    padding: 10px 30px;
+  }
+  .check-form div {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .check-form input {
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+  .host {
+    display: block;
+    line-height: 28px;
+  }
+  .contact-host {
+    margin: 40px 0;
+  }
+}
+/* -------------register page------------------ */
+.signcontainer {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+
+  justify-content: center;
+  padding-top: 3%;
+  padding-bottom: 0;
+}
+.signup .name {
+  display: flex;
+  justify-content: space-between;
+}
+.signup {
+  background: linear-gradient(to top left, #ff5361, #ffd3d6);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  width: 420px;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: right;
+}
+.signup label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.signup input {
+  padding: 5px 5px;
+  border: 1px solid #9894949f;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin-top: 4px;
+}
+.signup .button {
+  text-align: center;
+  margin-top: 15px;
+}
+.signup button {
+  width: 50%;
+  height: 30px;
+  background: white;
+  color: #ff5361;
+  box-shadow: 0 0 5px white;
+  border-radius: 20px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.signup .account {
+  text-align: center;
+}
+.signup .account a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.signup h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.signup .copyright p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+/* ----------signup for small screen---------------------------- */
+@media only screen and (max-width: 700px) {
+  .signup {
+    margin-top: 95px;
+  }
+}
